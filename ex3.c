@@ -27,7 +27,7 @@ int main(void)
     printf("Tamanho: ");
     scanf("%d",&tam);
 
-    v = alocdyn('i',tam);
+    v = alcdyn('i',tam);
 
     printf("Valor inteiro 'n': ");
     scanf("%d",&n);
@@ -44,7 +44,7 @@ int main(void)
     printf("\n\nTamanho do vetor de floats: ");
     scanf("%d",&tam);
 
-    vf = alocdyn('f',tam);
+    vf = alcdyn('f',tam);
 
     printf("Valor float 'n': ");
     scanf("%f",&nf);

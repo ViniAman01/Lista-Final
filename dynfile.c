@@ -16,7 +16,7 @@ FILE *opnfile(char *nome,char *modo)
     }
 }
 
-void *alocdyn(char tipo, int tam)
+void *alcdyn(char tipo, int tam)
 {
     void *dynV;
     switch(tipo)

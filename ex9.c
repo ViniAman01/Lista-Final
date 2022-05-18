@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "dynfile.h"
 
 int main(void)
 {
@@ -12,12 +13,7 @@ int main(void)
     printf("Digite o nome do arquivo: ");
     scanf("%s",nome);
 
-    arquivo = fopen(nome,"r");
-    if(arquivo == NULL)
-    {
-        perror("Erro na abertura");
-        exit(1);
-    }
+    arquivo = opnfile(nome,"r");
     
     while(!feof(arquivo))
     {
@@ -30,6 +26,8 @@ int main(void)
             }
         }       
     } 
+    
+    fclose(arquivo);
 
     printf("O arquivo possui %d vogais\n",cont);
 }
