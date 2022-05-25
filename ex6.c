@@ -19,7 +19,7 @@ int main(void)
     printf("n: ");
     scanf("%d",&n);
 
-    v = alcdyn('i',n);
+    alcI(&v,n);
 
     LeVetor(v,n);
 

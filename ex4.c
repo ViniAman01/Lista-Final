@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     FILE *arquivo;
     char c;
-    arquivo = opnfile(argv[1],"w+");
+    opnfile(&arquivo,argv[1],"w+");
     c = fgetc(stdin);
     while(c != '0')
     {

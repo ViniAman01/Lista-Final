@@ -30,7 +30,7 @@ int main(void)
     printf("Digite o tamanho do vetor de inteiros: ");
     scanf("%d",&tam);
 
-    v = alcdyn('i',tam);
+    alcI(&v,tam);
 
     printf("Digite os valores: ");
     for(ptr = v; ptr < (v+tam); ptr++)
@@ -46,7 +46,7 @@ int main(void)
     printf("\nDigite o tamanho do vetor de reais: ");
     scanf("%d",&tam);
 
-    vf = alcdyn('f',tam);
+    alcF(&vf,tam);
 
     printf("Digite os valores: ");
     for(ptrf = vf; ptrf < (vf+tam); ptrf++)

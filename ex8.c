@@ -12,7 +12,7 @@ int main(void)
     printf("Digite o nome do arquivo: ");
     scanf("%s",nome);
 
-    arquivo = opnfile(nome,'r');
+    opnfile(&arquivo,nome,'r');
     
     while(!feof(arquivo))
     {

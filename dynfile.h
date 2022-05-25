@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 void opnfile(FILE **arquivo,char *nome, char *modo);
-void *alcdyn(char tipo, int tam);
 void alcI(int **dynV,int tam);
 void alcC(char **dynV,int tam);
 void alcF(float **dynV,int tam);
