@@ -11,15 +11,15 @@ int main(int argc, char *argv[])
     int bol;
     char c,*ptr;
 
-    arquivo = opnfile(argv[1],"r");
+    opnfile(&arquivo,argv[1],"r");
 
     while(!feof(arquivo))
     {
         c = fgetc(arquivo);
         bol = 1;
-        for(ptr = vogais; ptr < (vogais+10); ptr++)
+        for(ptr = vogais; ptr < (vogais+5); ptr++)
         {
-            if(*ptr == c)
+            if(*ptr == c || c == *(ptr+5))
             {
                 contV++;
                 bol = 0;

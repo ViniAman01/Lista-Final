@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "cstdio": "cpp"
+        "cstdio": "cpp",
+        "ex2.h": "c",
+        "cctype": "c"
     }
 }

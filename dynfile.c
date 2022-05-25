@@ -1,37 +1,32 @@
 #include "dynfile.h"
 #include <stdlib.h>
 
-FILE *opnfile(char *nome,char *modo)
+void opnfile(FILE **arquivo,char *nome,char *modo)
 {
-    FILE *arquivo;
-    arquivo = fopen(nome,modo);
-    if(arquivo == NULL)
+    *arquivo = fopen(nome,modo);
+    if(*arquivo == NULL)
     {
         perror("Erro na abertura");
         exit(1);
     }
-    else
-    {
-        return arquivo;
-    }
 }
 
-void *alcdyn(char tipo, int tam)
+void* alcd(char tipo, int tam)
 {
     void *dynV;
     switch(tipo)
     {   
         case 'i':
-            dynV =  malloc(sizeof(int)*tam);
+            dynV =  (int*)malloc(sizeof(int)*tam);
             break;
         case 'f':
-            dynV = malloc(sizeof(float)*tam);
+            dynV = (float*)malloc(sizeof(float)*tam);
             break;
         case 'd':
-            dynV = malloc(sizeof(double)*tam);
+            dynV = (double*)malloc(sizeof(double)*tam);
             break;
         case 'c':
-            dynV = malloc(sizeof(char)*tam);
+            dynV = (char*)malloc(sizeof(char)*tam);
             break;
     }
     if(dynV == NULL)
@@ -43,4 +38,24 @@ void *alcdyn(char tipo, int tam)
     {
         return dynV;
     }
+}
+
+void alcI(int **dynV,int tam)
+{
+    *dynV = (int*)malloc(sizeof(int)*tam);
+}
+
+void alcC(char **dynV,int tam)
+{
+    *dynV = (char*)malloc(sizeof(char)*tam);
+}
+
+void alcF(float **dynV,int tam)
+{
+    *dynV = (float*)malloc(sizeof(float)*tam);
+}
+
+void alcD(double **dynV,int tam)
+{
+    *dynV = (double*)malloc(sizeof(double)*tam);
 }

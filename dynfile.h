@@ -2,7 +2,11 @@
 #define _DYNFILE_H
 #include <stdio.h>
 
-FILE *opnfile(char *nome, char *modo);
+void opnfile(FILE **arquivo,char *nome, char *modo);
 void *alcdyn(char tipo, int tam);
+void alcI(int **dynV,int tam);
+void alcC(char **dynV,int tam);
+void alcF(float **dynV,int tam);
+void alcD(double **dynV,int tam);
 
 #endif
