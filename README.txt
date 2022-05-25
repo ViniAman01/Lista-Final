@@ -1,1 +1,1 @@
-Olá tudo bom?
+As resoluções possuem tipos especificos de abetura. 
