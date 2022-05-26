@@ -14,7 +14,7 @@ Para criar o arquivo objeto dessa biblioteca, deve-se executar o seguinte comand
     
   > Onde "N" é o número do exercicio. 
 
-**3.** Do ex8.c até o ex22.c (Exceto o ex21.c, ex19.c), deve-se atribuir como argumento na execução o nome de um arquivo texto, exemplo:
+**3.** Do ex8.c até o ex22.c (exceto o ex21.c, ex19.c), deve-se atribuir como argumento na execução o nome de um arquivo texto, exemplo:
   
   ```./ex8 txt.txt```
 
@@ -28,7 +28,7 @@ Para criar o arquivo objeto dessa biblioteca, deve-se executar o seguinte comand
     > Caso não seja passado os arquivos texto, o seguinte erro será impresso no terminal:
     "Erro na abertura: Bad address"
 
-  - 3.2 No ex11.c deve-se passar além do nome do arquivo texto, deve-se passar também um caractere que terá suas aparições contabilizadas, exemplo:
+  - 3.2 No ex11.c além do nome do arquivo texto, deve-se passar também um caractere que terá suas aparições contabilizadas, exemplo:
   
     ```./ex11 txt.txt c```
     > Caso não seja atribuido um caractere, um erro de segmentação será impresso no terminal.
