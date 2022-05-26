@@ -31,4 +31,4 @@ Para criar o arquivo objeto dessa biblioteca, deve-se executar o seguinte comand
   - 3.2 No ex11.c além do nome do arquivo texto, deve-se passar também um caractere que terá suas aparições contabilizadas, exemplo:
   
     ```./ex11 txt.txt c```
-    > Caso não seja atribuido um caractere, um erro de segmentação será impresso no terminal.
+    > Caso não seja atribuido um caractere, um erro de segmentação será impresso no terminal.oi
