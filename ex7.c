@@ -13,7 +13,7 @@ void preenche(Pessoa *p)
     printf("Digite o nome: ");
     scanf("%[^\n]",p->nome);
     
-    printf("Digite a data de nascimento: ");
+    printf("Digite a data de nascimento (XX/XX/XXXX): ");
     scanf("%s",p->data);
 
     printf("Digite o CPF: ");
@@ -28,7 +28,9 @@ void Le(Pessoa *p)
 int main(void)
 {
     Pessoa p;
+
     preenche(&p);
     Le(&p);
+    
     return 0;
 }

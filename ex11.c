@@ -5,6 +5,7 @@ int main(int argc, char *argv[])
 {
     FILE *arquivo;
     int cont = 0;
+    
     opnfile(&arquivo,argv[1],"r");
 
     while(!feof(arquivo))

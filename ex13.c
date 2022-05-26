@@ -6,10 +6,12 @@ int main(int argc, char *argv[])
 {
     bool bin;
     FILE *arquivo,*arquivo2;
-    opnfile(&arquivo,argv[1],"r");
-    opnfile(&arquivo2,"Newfile.txt","w+");
     char vogais[10] = {'a','e','i','o','u','A','E','I','O','U'};
     char c;
+    
+    opnfile(&arquivo,argv[1],"r");
+    opnfile(&arquivo2,"Newfile.txt","w+");
+    
 
     while(!feof(arquivo))
     {
@@ -31,7 +33,9 @@ int main(int argc, char *argv[])
             fputc(c,arquivo2);
         }
     }
+
     fclose(arquivo);
     fclose(arquivo2);
+
     printf("Arquivo 'Newfile.txt' criado!\n");
 }

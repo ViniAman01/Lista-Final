@@ -35,9 +35,12 @@ int main(void)
 {
     float *v;
     aloca(&v,3,2.5);
+
     for(int i = 0; i < 3; i++)
     {
         printf("%f ",v[i]);
     }
+    
+    free(v);
     return 0;
 }

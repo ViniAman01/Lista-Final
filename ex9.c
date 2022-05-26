@@ -2,18 +2,14 @@
 #include <stdlib.h>
 #include "dynfile.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
     FILE *arquivo;
     char vogais[10] = {'A','E','I','O','U','a','e','i','o','u'};
     char *ptr,c;
-    char nome[20];
     int cont = 0;
 
-    printf("Digite o nome do arquivo: ");
-    scanf("%s",nome);
-
-    opnfile(&arquivo,nome,"r");
+    opnfile(&arquivo,argv[1],"r");
     
     while(!feof(arquivo))
     {
@@ -29,5 +25,5 @@ int main(void)
     
     fclose(arquivo);
 
-    printf("O arquivo possui %d vogais\n",cont);
+    printf("O arquivo possui %d vogais!\n",cont);
 }

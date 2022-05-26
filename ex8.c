@@ -2,17 +2,13 @@
 #include <stdlib.h>
 #include "dynfile.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
     FILE *arquivo;
     int cont = 1;
-    char nome[20];
     char c;
-    
-    printf("Digite o nome do arquivo: ");
-    scanf("%s",nome);
 
-    opnfile(&arquivo,nome,'r');
+    opnfile(&arquivo,argv[1],"r");
     
     while(!feof(arquivo))
     {
@@ -22,6 +18,6 @@ int main(void)
         }
     }
 
-    printf("O arquivo tem %d linhas\n",cont);
+    printf("O arquivo tem %d linhas!\n",cont);
     return 0;
 }

@@ -4,48 +4,46 @@
 
 int main(int argc, char *argv[])
 {
-    FILE *arquivo;
-    char c,cidade[40],maiorcidade[40];
-    long int posNUM;
-    int popul;
-    long int posLINHA = 0;
-    int maiorpopul = 0;
-    opnfile(&arquivo,"txt.txt","r");
+    FILE *arquivo,*arquivo2;
+    char c,cidade[150],maiorcidade[150];
+    int pos = 0;
+    long int popul;
+    int linha = 0;
+    long int maiorpopul = 0;
+
+    opnfile(&arquivo,argv[1],"r");
+    opnfile(&arquivo2,"Maiorpopulacao.txt","w+");
 
     while(!feof(arquivo))
-    {
-        c = fgetc(arquivo);
-        while(c < 48 || c > 57)
+    {    
+        do
         {
             c = fgetc(arquivo);
-        }
-        posNUM = ftell(arquivo);
-        while((c = fgetc(arquivo)) != '\n')
-        {
-            printf("%ld\n",ftell(arquivo));
-        }
-        posLINHA = ftell(arquivo);
+        }while((c < 48 || c > 57) && c != EOF);
 
-        printf("posNUM: %ld\nposLINHA: %ld\n",posLINHA,posNUM);
+        pos = ftell(arquivo);
 
-        //fseek(arquivo,linha-pos,SEEK_CUR);
+        fseek(arquivo,linha-pos,SEEK_CUR);
 
-        //printf("{Posição: %ld}",ftell(arquivo));
-        printf("Position: %ld\n",ftell(arquivo));
+        fgets(cidade,pos-linha-1,arquivo);
 
-        //fseek(arquivo,pos-1,SEEK_SET);
-
-        printf("Before: %ld\n",ftell(arquivo));
-
-        fscanf(arquivo,"%d",&popul);
-
+        fscanf(arquivo,"%ld",&popul);
+        
         if(popul > maiorpopul)
         {
             maiorpopul = popul;
             strcpy(maiorcidade,cidade);
         }
+
+        linha = ftell(arquivo)+1;
     }
 
-    printf("%s %d\n",maiorcidade,maiorpopul);
+    fprintf(arquivo2,"A cidade com a maior população:\nÉ %s com %ld habitantes!",maiorcidade,maiorpopul);
+
+    fclose(arquivo);
+    fclose(arquivo2);
+
+    printf("Arquivo 'Maiorpopulacao.txt' criado!\n");
+
     return 0;
 }
