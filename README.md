@@ -8,8 +8,8 @@ gcc -c dynfile.c
 
 
 Do ex3.c até o ex24.c (Exceto o ex7.c) a compilação deve ser feita da seguinte forma:
-gcc -c exN.c
-gcc dynfile.o exN.o -o exN
+```gcc -c exN.c
+gcc dynfile.o exN.o -o exN```
 Onde "N" é o número do exercicio. 
 
 
